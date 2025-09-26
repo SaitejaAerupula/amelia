@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammelia</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: #000;
+        }
+        .fullscreen-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60vh;
+        }
+        audio {
+            margin-top: 20px;
+            width: 90vw;
+            max-width: 300px;
+        }
+        @media (max-width: 600px) {
+            .content {
+                margin-top: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="Gemini_Generated_Image_8qu62u8qu62u8qu6.png" alt="Ammelia" class="fullscreen-img">
+    <div class="content">
+        <audio id="myAudio" controls>
+            <source src="UYYALO RAMA UYYALO(KoshalWorld.Com).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="playBtn" style="margin-top:20px;">Play Song from 30s</button>
+    </div>
+    <script>
+        document.getElementById('playBtn').onclick = function() {
+            var audio = document.getElementById('myAudio');
+            audio.currentTime = 30;
+            audio.play();
+        };
+    </script>
+</body>
+</html>
